@@ -32,10 +32,19 @@ Source: World Bank World Development Indicators, raw files in `data/raw/`
 - Exchange rate has 65 values, so 64 year-over-year changes (question 2).
 - Extremes: inflation min -9.81 (1986), max 44.36 (2008); exchange rate min 2.07 (1974),
   max 82.60 (2024); GDP growth min -11.14 (1985), max 13.86 (1987).
-- The exchange rate minimum of 2.07 first appears in 1974, which suggests a long fixed-rate
-  period (to be confirmed). If confirmed, many year-over-year changes are zero and the mean
-  change is dominated by a few large jumps, so the median is reported alongside the mean.
 - The newest values (2024, 2025) may be revised in future World Bank releases.
+
+## Exchange rate: fixed-rate period (confirmed)
+
+- The value 2.07 appears in 18 different years; it first appears in 1974 and is still
+  2.07 in 1990 and 1991. It changes in 1992 (2.80), then 5.00 in 1993, 5.46 in 1994,
+  6.16 in 1995, 6.35 in 1996.
+- The values 2.50 (7 years) and 2.48 (4 years) also repeat, which suggests further
+  near-fixed stretches (years not yet checked).
+- Consequence: the series has two regimes, a long fixed-rate period where year-over-year
+  change is zero, and a later period with large moves. A single mean percentage change
+  blends both, so question 2 reports the mean, the median, and the largest jump.
+- Future idea (not version 1): report the fixed and floating periods separately.
 
 ## Cleaning rules (each becomes a function in src/econ_pipeline/clean.py)
 
