@@ -6,7 +6,7 @@ using public World Bank data.
 
 ## Questions
 1. In which years did Ethiopia's inflation exceed 20%, and in how many years did that happen?
-2. What was the average annual change in the official exchange rate, and in which year was the single largest jump?
+2. What was the average annual percentage change in the official exchange rate (mean and median), and in which year was the single largest jump?
 3. Is there a relationship between inflation and GDP growth? Is average growth lower in high-inflation years than in the other years?
 
 ## Inputs
